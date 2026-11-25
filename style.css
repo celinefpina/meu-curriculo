@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right,
+    #c6afbb 0%,
+    #ead9df 10%,
+    #fffafc 20%,
+    #fff5f8 80%,
+    #ead9df 90%,
+    #c6afbb 100%);
+    display: flex;
+    justify-content: center;
+    padding: 25px 15px;
+}
+
+.curriculo {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* TOPO / LADO ESQUERDO */
+.topo {
+    background: #ad5577;
+    color: white;
+    text-align: center;
+    padding: 35px 20px 30px;
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffd6e3;
+    margin-bottom: 15px;
+}
+
+.topo h1 {
+    font-size: 32px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.cargo {
+    margin: 10px 0 14px;
+    font-style: italic;
+    color: #ffd6e3;
+    font-size: 14px;
+}
+
+.contato-topo {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.contato-topo a {
+    color: white;
+    font-weight: bold;
+}
+
+/* CONTEÚDO / LADO DIREITO */
+.conteudo {
+    background: #fff5f8;
+    padding: 25px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    color: #7a2148;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #f2b8cd;
+    padding-bottom: 6px;
+}
+
+.card h3 {
+    color: #7a2148;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.periodo {
+    font-size: 12px !important;
+    color: #a06a80 !important;
+}
+
+.item-educacao {
+    margin-bottom: 18px;
+}
+
+.item-educacao:last-child {
+    margin-bottom: 0;
+}
+
+.habilidades {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.habilidades li {
+    background: #ffe3ee;
+    color: #7a2148;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* CELULAR PEQUENO - só ajusta tamanho */
+@media (max-width: 500px) {
+    body {
+        padding: 0;
+    }
+    .curriculo {
+        border-radius: 0;
+    }
+    .topo h1 {
+        font-size: 28px;
+    }
+    .conteudo {
+        padding: 18px 14px;
+    }
+}
+
+/* COMPUTADOR - vira 2 colunas e some o espaço vazio */
+@media (min-width: 850px) {
+    body {
+        padding: 30px;
+        align-items: flex-start;
+    }
+
+    .curriculo {
+        max-width: 1000px;
+        display: flex;
+    }
+
+    .topo {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 25px;
+    }
+
+    .conteudo {
+        width: 65%;
+        padding: 28px;
+    }
+}
